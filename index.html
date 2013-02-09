@@ -1,26 +1,37 @@
-<html>
-  <head>
-    <title>Ellie's Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <!--link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet"-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span4">
-          <h3>Ellie's Website</h3>
-        </div>
-        <div class="span8">
-          <div class="row-fluid12">
-            Ellie's stuff will go here
+---
+layout: base
+title: Ellie Rose
+permalink: /
+---
+
+{% assign pageName = 'index' %}
+{% include nav.html %}
+
+<div class="row-fluid">
+  <div class="span3">
+  </div>
+  <div class="span6">
+    <div id="postCarousel" class="carousel slide">
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        {% for post in site.posts %}
+        <div class="{% if forloop.first %} active {% endif %} item">
+          <a href="{{ post.url }}/" title="{{ post.title }}"> 
+            <img src="{{ post.thumbnail-image }}" alt="{{ post.title }}">
+          </a>
+          <div class="carousel-caption">
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.description }}</p>
           </div>
         </div>
+        {% endfor %}
       </div>
+      <!-- Carousel nav -->
+      <a class="carousel-control left" href="#postCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#postCarousel" data-slide="next">&rsaquo;</a>
     </div>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js"></script>
-  </body>
-</html>
+  </div>
+  <div class="span3">
+  </div>
+</div>
 

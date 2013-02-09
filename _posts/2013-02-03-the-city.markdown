@@ -1,0 +1,9 @@
+---
+layout: picture
+title: The City
+description: Description of the "The City" picture
+thumbnail-image: /images/thumbnail.png
+main-image: /images/main.png
+published: true
+---
+
