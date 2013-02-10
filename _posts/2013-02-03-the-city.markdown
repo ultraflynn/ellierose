@@ -1,9 +1,9 @@
 ---
-layout: picture
+layout: post
 title: The City
-description: Description of the "The City" picture
-thumbnail-image: /images/thumbnail.png
-main-image: /images/main.png
+description: A quiet city with lots of people
+thumbnail-image: /images/posts/2013-02-03-the-city/tn-the-city.jpg
 published: true
 ---
 
+[![The City ](/images/posts/2013-02-03-the-city/the-city.jpg)](/images/posts/2013-02-03-the-city/tn-the-city.jpg)

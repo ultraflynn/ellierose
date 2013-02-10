@@ -6,5 +6,7 @@ layout: base
 {% include nav.html %}
 
 <h2>{{ page.title }}</h2>
-{{ content }}
+<p>Published: {{ page.date | date: '%d' }} <abbr>{{ page.date | date: '%b' }}</abbr> {{ page.date | date: '%Y' }}</p>
 
+<p>{{ page.description }}</p>
+{{ content }}
